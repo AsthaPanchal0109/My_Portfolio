@@ -1,0 +1,2024 @@
+/* ==================================================
+   BASIC RESET
+================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+
+    background-color: #5A1E2A;
+
+    color: #F3E8D0;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* ==================================================
+   LINKS
+================================================== */
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* ==================================================
+   HOME PAGE
+================================================== */
+
+.portfolio {
+
+    height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* ==================================================
+   INTRO CONTENT
+================================================== */
+
+.intro-content {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.02);
+
+    opacity: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform-origin: center;
+
+    animation:
+        zoomIn 4s ease-in-out forwards,
+        moveTextUp 1.2s ease-in-out 4.5s forwards;
+
+}
+
+
+/* ==================================================
+   NAME
+================================================== */
+
+.name {
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size: 130px;
+
+    font-weight: 900;
+
+    color: #F3E8D0;
+
+    letter-spacing: 10px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-shadow:
+        3px 3px 0px rgba(0, 0, 0, 0.25),
+        6px 6px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* ==================================================
+   SUBTITLE
+================================================== */
+
+.subtitle {
+
+    font-family:
+        "Arial Black",
+        sans-serif;
+
+    font-size: 35px;
+
+    font-weight: 800;
+
+    color: #F3E8D0;
+
+    letter-spacing: 8px;
+
+    margin-top: 25px;
+
+    opacity: 0;
+
+    animation:
+        subtitleAppear 4s ease-in-out forwards;
+
+}
+
+
+/* ==================================================
+   ZOOM ANIMATION
+================================================== */
+
+@keyframes zoomIn {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.1);
+
+        opacity: 0;
+
+    }
+
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ==================================================
+   SUBTITLE ANIMATION
+================================================== */
+
+@keyframes subtitleAppear {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0.02);
+
+    }
+
+
+    20% {
+
+        opacity: 1;
+
+        transform: scale(0.2);
+
+    }
+
+
+    55% {
+
+        opacity: 1;
+
+        transform: scale(0.8);
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* ==================================================
+   MOVE TEXT UP
+================================================== */
+
+@keyframes moveTextUp {
+
+    0% {
+
+        top: 50%;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+    }
+
+
+    100% {
+
+        top: 14%;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.55);
+
+    }
+
+}
+
+
+/* ==================================================
+   PLACARDS CONTAINER
+================================================== */
+
+.placards {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 75%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+}
+
+
+/* ==================================================
+   BASIC PLACARD
+================================================== */
+
+.placard {
+
+    position: absolute;
+
+    width: 260px;
+
+    height: 500px;
+
+    bottom: -600px;
+
+    background-color: #F3E8D0;
+
+    border: 5px solid #2A2022;
+
+    border-radius: 18px;
+
+    color: #2A2022;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        8px 8px 0px #2A2022,
+        0px 15px 30px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+
+}
+
+
+/* ==================================================
+   PLACARD CONTENT
+================================================== */
+
+.placard-content {
+
+    width: 80%;
+
+    height: 85%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px 10px;
+
+}
+
+
+/* ==================================================
+   CARD NUMBER
+================================================== */
+
+.card-number {
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    align-self: flex-start;
+
+}
+
+
+/* ==================================================
+   CARD TITLE
+================================================== */
+
+.placard h2 {
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size: 42px;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
+
+}
+
+
+/* ==================================================
+   CARD DESCRIPTION
+================================================== */
+
+.placard p {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    max-width: 190px;
+
+}
+
+
+/* ==================================================
+   CARD HOVER
+================================================== */
+
+.placard:hover {
+
+    box-shadow:
+        12px 12px 0px #2A2022,
+        0px 20px 35px rgba(0, 0, 0, 0.35);
+
+    filter: brightness(1.05);
+
+}
+
+
+/* ==================================================
+   ABOUT CARD
+================================================== */
+
+.placard-about {
+
+    z-index: 1;
+
+    animation:
+        riseAbout 1.4s ease-out 4.8s forwards;
+
+}
+
+
+/* ==================================================
+   SKILLS CARD
+================================================== */
+
+.placard-skills {
+
+    z-index: 2;
+
+    animation:
+        riseSkills 1.4s ease-out 5s forwards;
+
+}
+
+
+/* ==================================================
+   PROJECTS CARD
+================================================== */
+
+.placard-projects {
+
+    z-index: 3;
+
+    animation:
+        riseProjects 1.4s ease-out 5.2s forwards;
+
+}
+
+
+/* ==================================================
+   CONTACT CARD
+================================================== */
+
+.placard-contact {
+
+    z-index: 4;
+
+    animation:
+        riseContact 1.4s ease-out 5.4s forwards;
+
+}
+
+
+/* ==================================================
+   ABOUT CARD ANIMATION
+================================================== */
+
+@keyframes riseAbout {
+
+    0% {
+
+        bottom: -600px;
+
+        opacity: 0;
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        bottom: -20px;
+
+        opacity: 1;
+
+        transform:
+            translateX(-430px);
+
+    }
+
+}
+
+
+/* ==================================================
+   SKILLS CARD ANIMATION
+================================================== */
+
+@keyframes riseSkills {
+
+    0% {
+
+        bottom: -600px;
+
+        opacity: 0;
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        bottom: -20px;
+
+        opacity: 1;
+
+        transform:
+            translateX(-145px);
+
+    }
+
+}
+
+
+/* ==================================================
+   PROJECTS CARD ANIMATION
+================================================== */
+
+@keyframes riseProjects {
+
+    0% {
+
+        bottom: -600px;
+
+        opacity: 0;
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        bottom: -20px;
+
+        opacity: 1;
+
+        transform:
+            translateX(145px);
+
+    }
+
+}
+
+
+/* ==================================================
+   CONTACT CARD ANIMATION
+================================================== */
+
+@keyframes riseContact {
+
+    0% {
+
+        bottom: -600px;
+
+        opacity: 0;
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        bottom: -20px;
+
+        opacity: 1;
+
+        transform:
+            translateX(430px);
+
+    }
+
+}
+
+
+/* ==================================================
+   SECTION PAGES
+================================================== */
+
+.section-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    background-color: #5A1E2A;
+
+    color: #F3E8D0;
+
+    position: relative;
+
+    padding: 50px;
+
+}
+
+
+/* ==================================================
+   RETURN HOME
+================================================== */
+
+.return-home {
+
+    position: absolute;
+
+    top: 40px;
+
+    left: 50px;
+
+    color: #F3E8D0;
+
+    font-family:
+        "Arial Black",
+        sans-serif;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    transition:
+        opacity 0.3s ease;
+
+    z-index: 10;
+
+}
+
+
+.return-home:hover {
+
+    opacity: 0.6;
+
+}
+
+
+/* ==================================================
+   SECTION CONTENT
+================================================== */
+
+.section-content {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin: auto;
+
+}
+
+
+/* ==================================================
+   SECTION NUMBER
+================================================== */
+
+.section-number {
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size: 30px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==================================================
+   SECTION TITLE
+================================================== */
+
+.section-content h1 {
+
+    font-family:
+        Impact,
+        "Arial Black",
+        sans-serif;
+
+    font-size: 100px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ==================================================
+   GENERAL SECTION TEXT
+================================================== */
+
+.section-content p {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==================================================
+   ==================================================
+   ABOUT ME PAGE
+   ==================================================
+================================================== */
+
+.about-page .section-content {
+
+    min-height: auto;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    padding-top: 100px;
+
+    padding-bottom: 80px;
+
+}
+
+
+/* ----------------------------------------------
+   ABOUT TITLE
+---------------------------------------------- */
+
+.about-page .section-content h1 {
+
+    font-size: 80px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ----------------------------------------------
+   ABOUT TEXT CONTAINER
+---------------------------------------------- */
+
+.about-text {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    text-align: justify;
+
+}
+
+
+/* ----------------------------------------------
+   ABOUT PARAGRAPHS
+---------------------------------------------- */
+
+.about-text p {
+
+    width: 100%;
+
+    max-width: none;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    text-align: justify;
+
+}
+
+
+/* ----------------------------------------------
+   ABOUT INTRO
+---------------------------------------------- */
+
+.about-text .about-intro {
+
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    font-weight: 600;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ==================================================
+   ==================================================
+   SKILLS PAGE
+   ==================================================
+================================================== */
+
+.skills-page {
+
+    min-height: 100vh;
+
+}
+
+
+/* ----------------------------------------------
+   SKILLS CONTENT
+---------------------------------------------- */
+
+.skills-page .section-content {
+
+    min-height: auto;
+
+    justify-content: flex-start;
+
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+
+}
+
+
+/* ----------------------------------------------
+   SKILLS TITLE
+---------------------------------------------- */
+
+.skills-page .section-content h1 {
+
+    font-size: 80px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ----------------------------------------------
+   SKILLS GRID
+---------------------------------------------- */
+
+.skills-grid {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* ----------------------------------------------
+   SKILL BOX
+---------------------------------------------- */
+
+.skill-box {
+
+    min-height: 140px;
+
+    border: 3px solid #F3E8D0;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+/* ----------------------------------------------
+   SKILL BOX TITLE
+---------------------------------------------- */
+
+.skill-box h2 {
+
+    font-family:
+        "Arial Black",
+        sans-serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ----------------------------------------------
+   SKILL BOX TEXT
+---------------------------------------------- */
+
+.skill-box p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+}
+
+
+/* ----------------------------------------------
+   SKILL BOX HOVER
+---------------------------------------------- */
+
+.skill-box:hover {
+
+    transform:
+        translateY(-5px);
+
+    background-color:
+        rgba(243, 232, 208, 0.08);
+
+}
+
+
+/* ==================================================
+   ==================================================
+   PROJECTS PAGE
+   ==================================================
+================================================== */
+
+.projects-page .section-content {
+
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+
+}
+
+
+/* ----------------------------------------------
+   PROJECT BOX
+---------------------------------------------- */
+
+.project {
+
+    width: 700px;
+
+    max-width: 90%;
+
+    border: 3px solid #F3E8D0;
+
+    padding: 30px;
+
+    margin: 15px;
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+/* ----------------------------------------------
+   PROJECT TITLE
+---------------------------------------------- */
+
+.project h2 {
+
+    font-family:
+        "Arial Black",
+        sans-serif;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ----------------------------------------------
+   PROJECT HOVER
+---------------------------------------------- */
+
+.project:hover {
+
+    transform:
+        translateY(-5px);
+
+    background-color:
+        rgba(243, 232, 208, 0.08);
+
+}
+
+
+/* ==================================================
+   ==================================================
+   CONTACT PAGE
+   ==================================================
+================================================== */
+
+.contact-page .section-content {
+
+    padding-top: 50px;
+
+}
+
+
+/* ----------------------------------------------
+   CONTACT INTRO
+---------------------------------------------- */
+
+.contact-intro {
+
+    font-size: 24px !important;
+
+    font-weight: 600;
+
+    margin-bottom: 40px !important;
+
+}
+
+
+/* ----------------------------------------------
+   EMAIL
+---------------------------------------------- */
+
+.email-section {
+
+    margin-bottom: 45px;
+
+}
+
+
+.contact-label {
+
+    display: block;
+
+    font-family:
+        "Arial Black",
+        sans-serif;
+
+    font-size: 16px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.email-section p {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+
+/* ----------------------------------------------
+   SOCIAL LINKS
+---------------------------------------------- */
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+
+/* ----------------------------------------------
+   SOCIAL LINK
+---------------------------------------------- */
+
+.social-link {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
+}
+
+
+/* ----------------------------------------------
+   SOCIAL ICON
+---------------------------------------------- */
+
+.social-link i {
+
+    font-size: 50px;
+
+}
+
+
+/* ----------------------------------------------
+   SOCIAL HOVER
+---------------------------------------------- */
+
+.social-link:hover {
+
+    transform:
+        translateY(-7px);
+
+    opacity: 0.7;
+
+}
+
+
+/* ==================================================
+   RETURNING HOME
+================================================== */
+
+body.returning .intro-content {
+
+    animation: none;
+
+    top: 14%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.55);
+
+    opacity: 1;
+
+}
+
+
+body.returning .subtitle {
+
+    animation: none;
+
+    opacity: 1;
+
+}
+
+
+body.returning .placard {
+
+    animation: none;
+
+    bottom: -20px;
+
+    opacity: 1;
+
+}
+
+
+body.returning .placard-about {
+
+    transform:
+        translateX(-430px);
+
+}
+
+
+body.returning .placard-skills {
+
+    transform:
+        translateX(-145px);
+
+}
+
+
+body.returning .placard-projects {
+
+    transform:
+        translateX(145px);
+
+}
+
+
+body.returning .placard-contact {
+
+    transform:
+        translateX(430px);
+
+}
+
+
+/* ==================================================
+   ==================================================
+   TABLET
+   ==================================================
+================================================== */
+
+@media (max-width: 1200px) {
+
+
+    /* ----------------------------------------------
+       INTRO
+    ---------------------------------------------- */
+
+    .name {
+
+        font-size: 100px;
+
+        letter-spacing: 7px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 28px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    /* ----------------------------------------------
+       PLACARDS
+    ---------------------------------------------- */
+
+    .placard {
+
+        width: 210px;
+
+        height: 430px;
+
+    }
+
+
+    /* ----------------------------------------------
+       TABLET ABOUT
+    ---------------------------------------------- */
+
+    .placard-about {
+
+        animation-name:
+            riseAboutTablet;
+
+    }
+
+
+    .placard-skills {
+
+        animation-name:
+            riseSkillsTablet;
+
+    }
+
+
+    .placard-projects {
+
+        animation-name:
+            riseProjectsTablet;
+
+    }
+
+
+    .placard-contact {
+
+        animation-name:
+            riseContactTablet;
+
+    }
+
+
+    @keyframes riseAboutTablet {
+
+        0% {
+
+            bottom: -600px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -20px;
+
+            opacity: 1;
+
+            transform:
+                translateX(-330px);
+
+        }
+
+    }
+
+
+    @keyframes riseSkillsTablet {
+
+        0% {
+
+            bottom: -600px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -20px;
+
+            opacity: 1;
+
+            transform:
+                translateX(-110px);
+
+        }
+
+    }
+
+
+    @keyframes riseProjectsTablet {
+
+        0% {
+
+            bottom: -600px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -20px;
+
+            opacity: 1;
+
+            transform:
+                translateX(110px);
+
+        }
+
+    }
+
+
+    @keyframes riseContactTablet {
+
+        0% {
+
+            bottom: -600px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -20px;
+
+            opacity: 1;
+
+            transform:
+                translateX(330px);
+
+        }
+
+    }
+
+
+    /* ----------------------------------------------
+       TABLET RETURNING
+    ---------------------------------------------- */
+
+    body.returning .placard-about {
+
+        transform:
+            translateX(-330px);
+
+    }
+
+
+    body.returning .placard-skills {
+
+        transform:
+            translateX(-110px);
+
+    }
+
+
+    body.returning .placard-projects {
+
+        transform:
+            translateX(110px);
+
+    }
+
+
+    body.returning .placard-contact {
+
+        transform:
+            translateX(330px);
+
+    }
+
+
+    /* ----------------------------------------------
+       TABLET SECTION TITLES
+    ---------------------------------------------- */
+
+    .section-content h1 {
+
+        font-size: 80px;
+
+    }
+
+
+    .about-page .section-content h1,
+    .skills-page .section-content h1 {
+
+        font-size: 70px;
+
+    }
+
+}
+
+
+/* ==================================================
+   ==================================================
+   MOBILE
+   ==================================================
+================================================== */
+
+@media (max-width: 700px) {
+
+
+    /* ----------------------------------------------
+       INTRO
+    ---------------------------------------------- */
+
+    .name {
+
+        font-size: 48px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 16px;
+
+        letter-spacing: 3px;
+
+        margin-top: 15px;
+
+    }
+
+
+    /* ----------------------------------------------
+       PLACARDS
+    ---------------------------------------------- */
+
+    .placard {
+
+        width: 130px;
+
+        height: 300px;
+
+        border-width: 3px;
+
+    }
+
+
+    .placard h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .placard p {
+
+        font-size: 11px;
+
+        max-width: 100px;
+
+    }
+
+
+    .card-number {
+
+        font-size: 16px;
+
+    }
+
+
+    /* ----------------------------------------------
+       MOBILE CARD ANIMATIONS
+    ---------------------------------------------- */
+
+    .placard-about {
+
+        animation-name:
+            riseAboutMobile;
+
+    }
+
+
+    .placard-skills {
+
+        animation-name:
+            riseSkillsMobile;
+
+    }
+
+
+    .placard-projects {
+
+        animation-name:
+            riseProjectsMobile;
+
+    }
+
+
+    .placard-contact {
+
+        animation-name:
+            riseContactMobile;
+
+    }
+
+
+    @keyframes riseAboutMobile {
+
+        0% {
+
+            bottom: -400px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -10px;
+
+            opacity: 1;
+
+            transform:
+                translateX(-150px);
+
+        }
+
+    }
+
+
+    @keyframes riseSkillsMobile {
+
+        0% {
+
+            bottom: -400px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -10px;
+
+            opacity: 1;
+
+            transform:
+                translateX(-50px);
+
+        }
+
+    }
+
+
+    @keyframes riseProjectsMobile {
+
+        0% {
+
+            bottom: -400px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -10px;
+
+            opacity: 1;
+
+            transform:
+                translateX(50px);
+
+        }
+
+    }
+
+
+    @keyframes riseContactMobile {
+
+        0% {
+
+            bottom: -400px;
+
+            opacity: 0;
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        100% {
+
+            bottom: -10px;
+
+            opacity: 1;
+
+            transform:
+                translateX(150px);
+
+        }
+
+    }
+
+
+    /* ----------------------------------------------
+       MOBILE RETURNING
+    ---------------------------------------------- */
+
+    body.returning .placard {
+
+        bottom: -10px;
+
+    }
+
+
+    body.returning .placard-about {
+
+        transform:
+            translateX(-150px);
+
+    }
+
+
+    body.returning .placard-skills {
+
+        transform:
+            translateX(-50px);
+
+    }
+
+
+    body.returning .placard-projects {
+
+        transform:
+            translateX(50px);
+
+    }
+
+
+    body.returning .placard-contact {
+
+        transform:
+            translateX(150px);
+
+    }
+
+
+    /* ----------------------------------------------
+       SECTION PAGE
+    ---------------------------------------------- */
+
+    .section-page {
+
+        padding: 25px;
+
+    }
+
+
+    .return-home {
+
+        top: 25px;
+
+        left: 25px;
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .section-content {
+
+        min-height: auto;
+
+        padding-top: 70px;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    /* ----------------------------------------------
+       SECTION TITLE
+    ---------------------------------------------- */
+
+    .section-content h1 {
+
+        font-size: 50px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .section-number {
+
+        font-size: 20px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    /* ----------------------------------------------
+       ABOUT MOBILE
+    ---------------------------------------------- */
+
+    .about-page .section-content {
+
+        padding-top: 80px;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .about-page .section-content h1 {
+
+        font-size: 48px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .about-text {
+
+        width: 100%;
+
+    }
+
+
+    .about-text p {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .about-text .about-intro {
+
+        font-size: 18px;
+
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    /* ----------------------------------------------
+       SKILLS MOBILE
+    ---------------------------------------------- */
+
+    .skills-page .section-content {
+
+        padding-top: 70px;
+
+        padding-bottom: 60px;
+
+    }
+
+
+    .skills-page .section-content h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .skills-grid {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .skill-box {
+
+        min-height: 120px;
+
+        padding: 22px;
+
+    }
+
+
+    .skill-box h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .skill-box p {
+
+        font-size: 15px;
+
+    }
+
+
+    /* ----------------------------------------------
+       PROJECTS MOBILE
+    ---------------------------------------------- */
+
+    .project {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 20px;
+
+    }
+
+
+    .project h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .project p {
+
+        font-size: 16px;
+
+    }
+
+
+    /* ----------------------------------------------
+       CONTACT MOBILE
+    ---------------------------------------------- */
+
+    .contact-intro {
+
+        font-size: 18px !important;
+
+        max-width: 90% !important;
+
+    }
+
+
+    .email-section p {
+
+        font-size: 17px;
+
+        word-break: break-word;
+
+    }
+
+
+    .social-links {
+
+        gap: 40px;
+
+    }
+
+
+    .social-link i {
+
+        font-size: 42px;
+
+    }
+
+
+    .social-link {
+
+        font-size: 15px;
+
+    }
+
+}

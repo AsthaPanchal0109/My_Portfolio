@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Astha Panchal | Portfolio</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HOME PAGE
+    ========================================== -->
+
+    <div class="portfolio">
+
+
+        <!-- =====================================
+             INTRO
+        ====================================== -->
+
+        <div class="intro-content">
+
+            <h1 class="name">
+                ASTHA PANCHAL
+            </h1>
+
+            <p class="subtitle">
+                CSDS STUDENT
+            </p>
+
+        </div>
+
+
+        <!-- =====================================
+             PLACARDS
+        ====================================== -->
+
+        <div class="placards">
+
+
+            <!-- ABOUT ME -->
+
+            <a href="about.html"
+               class="placard placard-about">
+
+                <div class="placard-content">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <h2>
+                        ABOUT ME
+                    </h2>
+
+                    <p>
+                        The person behind the code.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- SKILLS -->
+
+            <a href="skills.html"
+               class="placard placard-skills">
+
+                <div class="placard-content">
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                    <h2>
+                        SKILLS
+                    </h2>
+
+                    <p>
+                        Building my toolkit,
+                        one skill at a time.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- PROJECTS -->
+
+            <a href="projects.html"
+               class="placard placard-projects">
+
+                <div class="placard-content">
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                    <h2>
+                        PROJECTS
+                    </h2>
+
+                    <p>
+                        Where learning
+                        turns into building.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- CONTACT -->
+
+            <a href="contact.html"
+               class="placard placard-contact">
+
+                <div class="placard-content">
+
+                    <span class="card-number">
+                        04
+                    </span>
+
+                    <h2>
+                        CONTACT
+                    </h2>
+
+                    <p>
+                        Let's turn ideas into
+                        something meaningful.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         RETURNING HOME CHECK
+    ========================================== -->
+
+    <script>
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+
+        if (urlParams.get("return") === "true") {
+
+            document.body.classList.add("returning");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
